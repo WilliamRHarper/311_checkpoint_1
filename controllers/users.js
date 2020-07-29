@@ -18,7 +18,7 @@ const showUser = (req, res) => {
 };
 const createUser = (req, res) => {
   users.push(sampleUser);
-  res.json(sampleUser);
+  res.json(users);
 };
 const updateUser = (req, res) => {
   const id = req.params.id;
