@@ -24,7 +24,7 @@ const updateUser = (req, res) => {
   const id = req.params.id;
   const foundUser = users.find((user) => user.id === Number(id));
   if (!foundUser) {
-    res.status(404).send({ error: "User doesn't exist" });
+    res.status(400).send({ error: "Bad Request" });
   }
   for (let i = 0; i < users.length; i++) {
     if (users[i].id === Number(id)) {
